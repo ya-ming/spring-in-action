@@ -1,4 +1,4 @@
-package com.yaming.spring.ch02.soundsystem.autoconfig;
+package com.yaming.spring.ch02.soundsystem.impl;
 
 import com.yaming.spring.ch02.soundsystem.interfaces.CompactDisc;
 import org.springframework.stereotype.Component;

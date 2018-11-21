@@ -1,5 +1,7 @@
 package com.yaming.spring.ch02.soundsystem.autoconfig;
 
+import com.yaming.spring.ch02.soundsystem.interfaces.CompactDisc;
+import com.yaming.spring.ch02.soundsystem.interfaces.MediaPlayer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
