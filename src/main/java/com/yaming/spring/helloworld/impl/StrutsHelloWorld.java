@@ -1,6 +1,6 @@
-package main.java.com.yaming.spring.helloworld.impl;
+package com.yaming.spring.helloworld.impl;
 
-import main.java.com.yaming.spring.helloworld.HelloWorld;
+import com.yaming.spring.helloworld.HelloWorld;
 
 // Other class implements HelloWorld
 public class StrutsHelloWorld implements HelloWorld {

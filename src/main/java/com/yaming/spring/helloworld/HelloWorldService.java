@@ -1,4 +1,4 @@
-package main.java.com.yaming.spring.helloworld;
+package com.yaming.spring.helloworld;
 
 public class HelloWorldService {
 
