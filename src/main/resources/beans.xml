@@ -1,15 +1,34 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/aop
+      http://www.springframework.org/schema/aop/spring-aop.xsd
+      http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="springHelloWorld"
-          class="com.yaming.spring.helloworld.impl.SpringHelloWorld"></bean>
+          class="com.yaming.spring.helloworld.impl.SpringHelloWorld"/>
     <bean id="strutsHelloWorld"
-          class="com.yaming.spring.helloworld.impl.StrutsHelloWorld"></bean>
+          class="com.yaming.spring.helloworld.impl.StrutsHelloWorld"/>
 
+    <bean id="logPrinter" class="com.yaming.spring.helloworld.impl.LogPrinter">
+        <constructor-arg value="#{T(System).out}"/>
+    </bean>
 
     <bean id="helloWorldService"
           class="com.yaming.spring.helloworld.HelloWorldService">
         <property name="helloWorld" ref="springHelloWorld"/>
     </bean>
+
+    <aop:config>
+        <aop:aspect ref="logPrinter">
+            <aop:pointcut id="sayHello"
+                          expression="execution(* *.sayHello(..))"/>
+
+            <aop:before pointcut-ref="sayHello"
+                        method="printBeforeSayHello"/>
+
+            <aop:after pointcut-ref="sayHello"
+                       method="printAfterSayHello"/>
+        </aop:aspect>
+    </aop:config>
 </beans>
