@@ -1,4 +1,4 @@
-package com.yaming.spring.helloworld.impl;
+package com.yaming.spring.ch01.helloworld.impl;
 
 import java.io.PrintStream;
 

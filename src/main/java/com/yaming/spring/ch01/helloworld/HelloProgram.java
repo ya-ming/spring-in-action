@@ -1,8 +1,5 @@
-package com.yaming.spring;
+package com.yaming.spring.ch01.helloworld;
 
-
-import com.yaming.spring.helloworld.HelloWorld;
-import com.yaming.spring.helloworld.HelloWorldService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
