@@ -16,6 +16,8 @@ dependencies {
     compile("org.springframework:spring-context:${springVersion}")
     // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
     compile group: 'org.aspectj', name: 'aspectjweaver', version: aspectjVersion
+    compile("org.springframework:spring-jdbc:${springVersion}")
+    compile("com.h2database:h2:${h2Version}")
 
     // https://mvnrepository.com/artifact/junit/junit
     testCompile("junit:junit:${junitVersion}")
