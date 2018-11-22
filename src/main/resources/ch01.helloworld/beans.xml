@@ -6,16 +6,16 @@
       http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="springHelloWorld"
-          class="com.yaming.spring.ch01.helloworld.impl.SpringHelloWorld"/>
+          class="ch01.helloworld.impl.SpringHelloWorld"/>
     <bean id="strutsHelloWorld"
-          class="com.yaming.spring.ch01.helloworld.impl.StrutsHelloWorld"/>
+          class="ch01.helloworld.impl.StrutsHelloWorld"/>
 
-    <bean id="logPrinter" class="com.yaming.spring.ch01.helloworld.impl.LogPrinter">
+    <bean id="logPrinter" class="ch01.helloworld.impl.LogPrinter">
         <constructor-arg value="#{T(System).out}"/>
     </bean>
 
     <bean id="helloWorldService"
-          class="com.yaming.spring.ch01.helloworld.HelloWorldService">
+          class="ch01.helloworld.HelloWorldService">
         <property name="helloWorld" ref="springHelloWorld"/>
     </bean>
 
