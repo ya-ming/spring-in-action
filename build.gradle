@@ -15,9 +15,10 @@ repositories {
 dependencies {
     compile("org.springframework:spring-context:${springVersion}")
     // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
-    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.5.4'
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: aspectjVersion
+
     // https://mvnrepository.com/artifact/junit/junit
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile("junit:junit:${junitVersion}")
     testCompile("org.springframework:spring-test:${springVersion}")
     testCompile "com.github.stefanbirkner:system-rules:${systemRulesVersion}"
 }
