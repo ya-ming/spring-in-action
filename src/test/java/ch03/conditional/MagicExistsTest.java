@@ -19,7 +19,7 @@ public class MagicExistsTest {
 
     @Test
     public void shouldBeTrueTest() {
-        assertTrue(context.containsBean("magicBean"));
+        assertFalse(context.containsBean("magicBean"));
 
     }
 }
