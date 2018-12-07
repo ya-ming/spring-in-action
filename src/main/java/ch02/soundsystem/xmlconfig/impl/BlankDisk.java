@@ -29,4 +29,14 @@ public class BlankDisk implements CompactDisc {
             System.out.println("-Track: " + track);
         }
     }
+
+    @Override
+    public void playTrack(int trackNumber) {
+
+    }
+
+    @Override
+    public void setTracks(List<String> tracks) {
+
+    }
 }

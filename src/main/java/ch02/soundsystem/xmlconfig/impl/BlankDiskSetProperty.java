@@ -27,4 +27,9 @@ public class BlankDiskSetProperty implements CompactDisc {
             System.out.println("-Track: " + track);
         }
     }
+
+    @Override
+    public void playTrack(int trackNumber) {
+
+    }
 }
