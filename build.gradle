@@ -24,6 +24,9 @@ dependencies {
     // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
     compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.2'
 
+    // MVC
+    compile ("org.springframework:spring-webmvc:$springVersion")
+    compile "org.apache.commons:commons-lang3:$commonsLangVersion"
 
     // https://mvnrepository.com/artifact/junit/junit
     testCompile("junit:junit:${junitVersion}")
