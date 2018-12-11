@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-    <title>Spitter -spittles</title>
+    <title>Spitter - spittles</title>
     <link rel="stylesheet"
           type="text/css"
           href="<c:url value="/resources/style.css" />" >

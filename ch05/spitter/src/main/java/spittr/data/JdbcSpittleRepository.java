@@ -30,10 +30,10 @@ public class JdbcSpittleRepository implements SpittleRepository {
 
   public List<Spittle> findSpittles(long max, int count) {
     return jdbc.query(
-        "select id, message, created_at, latitude, longitude" +
+        String.format("select id, message, created_at, latitude, longitude" +
         " from Spittle" +
         " where id < ?" +
-        " order by created_at desc limit 20",
+        " order by created_at desc limit %d", count),
         new SpittleRowMapper(), max);
   }
 
