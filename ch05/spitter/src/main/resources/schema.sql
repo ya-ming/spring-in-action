@@ -14,3 +14,7 @@ create table Spitter (
 	last_name varchar(30) not null,
 	email varchar(30) not null
 );
+
+INSERT INTO `spittle` (`id`, `message`, `created_at`, `latitude`, `longitude`) VALUES ('1', 'm 1', '2018-12-08', '1.1', '1.1');
+INSERT INTO `spittle` (`id`, `message`, `created_at`, `latitude`, `longitude`) VALUES ('2', 'm 2', '2018-12-08', '2.2', '2.2');
+INSERT INTO `spittle` (`id`, `message`, `created_at`, `latitude`, `longitude`) VALUES ('3', 'm 3', '2018-12-08', '3.3', '3.3');
