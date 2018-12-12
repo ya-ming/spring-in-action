@@ -13,4 +13,9 @@ public class ConcertConfig {
     public Audience audience() {
         return new Audience();
     }
+
+    @Bean
+    public MyCleaner cleaner() {
+        return new MyCleaner();
+    }
 }
