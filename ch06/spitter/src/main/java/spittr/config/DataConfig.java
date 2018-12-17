@@ -1,13 +1,13 @@
 package spittr.config;
 
+import javax.sql.DataSource;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
-
-import javax.sql.DataSource;
 
 @Configuration
 public class DataConfig {
@@ -19,7 +19,7 @@ public class DataConfig {
             .addScript("schema.sql")
             .build();
   }
-  
+
   @Bean
   public JdbcOperations jdbcTemplate(DataSource dataSource) {
     return new JdbcTemplate(dataSource);

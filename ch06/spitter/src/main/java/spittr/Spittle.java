@@ -5,14 +5,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import java.util.Date;
 
 public class Spittle {
-    private final Long id;
-    private final String message;
-    private final Date time;
+    private Long id;
+    private String message;
+    private Date time;
     private Double latitude;
     private Double longitude;
 
     public Spittle(String message, Date time) {
         this(null, message, time, null, null);
+    }
+
+    // this construct is needed for accepting the POST request with Spittle in JSON format
+    public Spittle() {
+
     }
 
     public Spittle(Long id, String message, Date time, Double longitude, Double latitude) {

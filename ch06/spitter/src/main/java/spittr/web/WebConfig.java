@@ -34,35 +34,35 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         configurer.enable();
     }
 
-    /*
-     * Configures content-negotiation.
-     */
-    @Configuration
-    public static class ContentNegotiationConfig extends WebMvcConfigurerAdapter {
-
-        @Bean
-        public ViewResolver cnViewResolver(ContentNegotiationManager cnm) {
-            ContentNegotiatingViewResolver cnvr =
-                    new ContentNegotiatingViewResolver();
-            cnvr.setContentNegotiationManager(cnm);
-            return cnvr;
-        }
-
-        @Override
-        public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
-            configurer.defaultContentType(MediaType.TEXT_HTML);
-        }
-
-        @Bean
-        public ViewResolver beanNameViewResolver() {
-            return new BeanNameViewResolver();
-        }
-
-        @Bean
-        public View spittles() {
-            return new MappingJackson2JsonView();
-        }
-
-    }
+//    /*
+//     * Configures content-negotiation.
+//     */
+//    @Configuration
+//    public static class ContentNegotiationConfig extends WebMvcConfigurerAdapter {
+//
+//        @Bean
+//        public ViewResolver cnViewResolver(ContentNegotiationManager cnm) {
+//            ContentNegotiatingViewResolver cnvr =
+//                    new ContentNegotiatingViewResolver();
+//            cnvr.setContentNegotiationManager(cnm);
+//            return cnvr;
+//        }
+//
+//        @Override
+//        public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+//            configurer.defaultContentType(MediaType.TEXT_HTML);
+//        }
+//
+//        @Bean
+//        public ViewResolver beanNameViewResolver() {
+//            return new BeanNameViewResolver();
+//        }
+//
+//        @Bean
+//        public View spittles() {
+//            return new MappingJackson2JsonView();
+//        }
+//
+//    }
 
 }
